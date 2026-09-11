@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6070afed93df31844b271d83e1a96e4c, type: 3}
+  m_Name: SokobanConfig
+  m_EditorClassIdentifier: Sokoban.Runtime::Sokoban.SokobanConfig
+  cellSize: 1
+  gridOrigin: {x: 0, y: 0}
+  upKey: 37
+  downKey: 33
+  leftKey: 15
+  rightKey: 18
+  resetKey: 32
+  undoKey: 40
+  maxUndoSteps: 64
+  moveDuration: 0.08
+  toggleEditKey: 94
+  cameraScrollZoom: 1
+  invertCameraScroll: 0
+  cameraScrollSensitivity: 1.4
+  cameraMinDistance: 5
+  cameraMaxDistance: 32
+  cameraZoomSmooth: 0.1
+  hintText: "WASD \u79FB\u52A8    \u6EDA\u8F6E \u9AD8\u5EA6    Z \u64A4\u56DE   
+    R \u91CD\u7F6E    F1 \u7F16\u8F91"
+  winText: "\u5173\u5361\u5B8C\u6210"

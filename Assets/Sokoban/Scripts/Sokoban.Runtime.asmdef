@@ -1,0 +1,18 @@
+{
+  "name": "Sokoban.Runtime",
+  "rootNamespace": "Sokoban",
+  "references": [
+    "Unity.InputSystem",
+    "Unity.TextMeshPro",
+    "DZD.MapEditor"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

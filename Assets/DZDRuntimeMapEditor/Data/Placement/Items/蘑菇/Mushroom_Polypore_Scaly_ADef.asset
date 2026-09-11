@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e0d89f62431d2459ae11b28e6bdac7, type: 3}
+  m_Name: Mushroom_Polypore_Scaly_ADef
+  m_EditorClassIdentifier: Assembly-CSharp::DZDMapEditor.PlaceableItemDef
+  id: Mushroom_Polypore_Scaly_ADef
+  displayName: Polypore Scaly
+  category: {fileID: 11400000, guid: 808481590c20cbe4db8e2ab12390786e, type: 2}
+  prefab: {fileID: 8006705400114741305, guid: 8b0e1e93a71270a43845693504c86228, type: 3}
+  icon: {fileID: 21300000, guid: 35b29c2cc4b8cf54581e15e2fca9e6d4, type: 3}
+  alignToSurfaceNormal: 0
+  extraSurfaceOffset: 0

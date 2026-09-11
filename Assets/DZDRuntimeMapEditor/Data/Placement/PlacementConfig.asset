@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58aeea263f119f44c8f6160245069409, type: 3}
+  m_Name: PlacementConfig
+  m_EditorClassIdentifier: Assembly-CSharp::DZDMapEditor.PlacementConfig
+  surfaceMask:
+    serializedVersion: 2
+    m_Bits: 55
+  maxDistance: 200
+  surfaceOffset: 0.02
+  transformKeyStyle: 1
+  rotateDegreesPerSecond: 90
+  rotateDegreesPerTap: 15
+  scaleRatePerSecond: 0.8
+  scaleStepPerTap: 0.1
+  minUniformScale: 0.15
+  maxUniformScale: 8
+  overlaySettings: {fileID: 11400000, guid: c8e492ac58defe546929231644ffd514, type: 2}
+  ghostTint: {r: 0.4, g: 0.9, b: 1, a: 1}
+  ghostBreathMinAlpha: 0.06
+  ghostBreathMaxAlpha: 0.32
+  ghostBreathSpeed: 0.85
+  hoverColor: {r: 1, g: 0.85, b: 0.2, a: 0.9}
+  confirmSelectKey: 20
+  invertScroll: 0
+  toggleBackpackKey: 16
+  toggleHeightAdjustKey: 36
+  heightAdjustSwitchStyle: 1
+  toggleContinuousPlaceKey: 38
+  continuousSwitchStyle: 0
+  toggleSnapToSurfaceKey: 17
+  snapToSurfaceSwitchStyle: 0
+  toggleRotateAdjustKey: 72
+  rotateAdjustSwitchStyle: 1
+  toggleGridPlaceKey: 39
+  gridPlaceSwitchStyle: 0
+  defaultContinuousPlace: 0
+  defaultGridPlace: 1
+  gridCellSize: 1
+  gridOrigin: {x: 0, y: 0}
+  gridVisualRadius: 8
+  gridLineWidth: 0.02
+  gridYOffset: 0.03
+  gridOccupancy: 0
+  gridLineColor: {r: 0.45, g: 0.85, b: 1, a: 0.55}
+  gridFreeFillColor: {r: 0.35, g: 1, b: 0.45, a: 0.22}
+  gridOccupiedFillColor: {r: 1, g: 0.28, b: 0.22, a: 0.28}
+  gridOccupiedGhostTint: {r: 1, g: 0.35, b: 0.3, a: 1}
+  heightMetersPerPixel: 0.005
+  minHeightOffset: 0
+  maxHeightOffset: 40
+  rotateDegreesPerPixel: 0.25
+  toastChannel: {fileID: 11400000, guid: d6925ef851f0a6e48bda5d46c459c7a4, type: 2}
+  heightAdjustOnHint:
+    english: 'Height Adjust: On'
+    chinese: "\u9AD8\u5EA6\u8C03\u8282\uFF1A\u5F00"
+  heightAdjustOffHint:
+    english: 'Height Adjust: Off'
+    chinese: "\u9AD8\u5EA6\u8C03\u8282\uFF1A\u5173"
+  continuousOnHint:
+    english: 'Continuous Place: On'
+    chinese: "\u8FDE\u7EED\u6446\u653E\uFF1A\u5F00"
+  continuousOffHint:
+    english: 'Continuous Place: Off'
+    chinese: "\u8FDE\u7EED\u6446\u653E\uFF1A\u5173"
+  snapToSurfaceOnHint:
+    english: 'Snap to Surface: On'
+    chinese: "\u8D34\u5408\u8868\u9762\uFF1A\u5F00"
+  snapToSurfaceOffHint:
+    english: 'Snap to Surface: Off'
+    chinese: "\u8D34\u5408\u8868\u9762\uFF1A\u5173"
+  rotateAdjustOnHint:
+    english: 'Rotate Adjust: On'
+    chinese: "\u65CB\u8F6C\u8C03\u8282\uFF1A\u5F00"
+  rotateAdjustOffHint:
+    english: 'Rotate Adjust: Off'
+    chinese: "\u65CB\u8F6C\u8C03\u8282\uFF1A\u5173"
+  gridPlaceOnHint:
+    english: 'Grid Place: On'
+    chinese: "\u7F51\u683C\u653E\u7F6E\uFF1A\u5F00"
+  gridPlaceOffHint:
+    english: 'Grid Place: Off'
+    chinese: "\u7F51\u683C\u653E\u7F6E\uFF1A\u5173"
+  gridOccupiedHint:
+    english: Cell occupied
+    chinese: "\u6B64\u683C\u5DF2\u6709\u7269\u54C1"
+  gridInstanceCapHint:
+    english: Placement limit reached
+    chinese: "\u5DF2\u8FBE\u6570\u91CF\u4E0A\u9650"
+  rotateLeftKey: 31
+  rotateRightKey: 19
+  scaleModifierKey: 51
+  scaleModifierAltKey: 52

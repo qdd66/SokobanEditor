@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6296d701c8352948a0fdedc170ae4bf, type: 3}
+  m_Name: SettingsPanelConfig
+  m_EditorClassIdentifier: Assembly-CSharp::DZDMapEditor.SettingsPanelConfig
+  flyConfig: {fileID: 11400000, guid: bd33de5215372c8428c7641c09e8c0ea, type: 2}
+  placementConfig: {fileID: 11400000, guid: 6d9ae2718790627468f698445a236199, type: 2}
+  pauseMenuConfig: {fileID: 11400000, guid: eea112feb9f608c49a7b8abe1900d060, type: 2}
+  persistenceConfig: {fileID: 11400000, guid: 5a8f5144547f5e048928cf9303d0e86f, type: 2}
+  localeSettings: {fileID: 11400000, guid: d369e57e167e1864dab36d1ec5be749f, type: 2}
+  panelBackground: {fileID: -6695950386315148514, guid: 70179224421fd22409eb8a7d5387a326, type: 3}
+  title:
+    english: Settings
+    chinese: "\u8BBE\u7F6E"
+  hint:
+    english: Changes write to the config immediately. Esc cancels a key bind or returns
+      to pause.
+    chinese: "\u6539\u52A8\u7ACB\u523B\u5199\u5165\u914D\u7F6E\u3002Esc \u53D6\u6D88\u6539\u952E\u6216\u8FD4\u56DE\u6682\u505C\u3002"
+  backLabel:
+    english: Back
+    chinese: "\u8FD4\u56DE"
+  controlTab:
+    english: Controls
+    chinese: "\u63A7\u5236"
+  characterTab:
+    english: Character
+    chinese: "\u89D2\u8272\u64CD\u63A7"
+  placementTab:
+    english: Placement
+    chinese: "\u7269\u54C1\u6446\u653E"
+  sokobanTab:
+    english: Sokoban
+    chinese: "\u63A8\u7BB1\u5B50"
+  waitingForKey:
+    english: "Press a new key\u2026"
+    chinese: "\u6309\u4E0B\u65B0\u6309\u952E\u2026"
+  keyConflictHint:
+    english: Same as {0}
+    chinese: "\u4E0E\u300C{0}\u300D\u76F8\u540C"
+  generalGroup:
+    english: General
+    chinese: "\u5E38\u89C4"
+  flyGroup:
+    english: Flight
+    chinese: "\u89D2\u8272\u98DE\u884C"
+  placementGroup:
+    english: Placement
+    chinese: "\u7269\u54C1\u6446\u653E"
+  pauseGroup:
+    english: Pause
+    chinese: "\u6682\u505C"
+  persistenceGroup:
+    english: Saves
+    chinese: "\u5B58\u6863"
+  sokobanGroup:
+    english: Sokoban
+    chinese: "\u63A8\u7BB1\u5B50"
+  extraSettingSources:
+  - {fileID: 11400000, guid: f878bd2850c9bfd4c804cdfcbd04ad99, type: 2}
+  toastChannel: {fileID: 11400000, guid: d6925ef851f0a6e48bda5d46c459c7a4, type: 2}

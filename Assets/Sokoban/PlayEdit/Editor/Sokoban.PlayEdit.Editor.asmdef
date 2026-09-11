@@ -1,0 +1,24 @@
+{
+  "name": "Sokoban.PlayEdit.Editor",
+  "rootNamespace": "Sokoban.PlayEdit",
+  "references": [
+    "Sokoban.PlayEdit",
+    "Sokoban.Runtime",
+    "DZD.MapEditor",
+    "DZD.MapEditor.Editor",
+    "Unity.InputSystem",
+    "Unity.TextMeshPro",
+    "Unity.ugui"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

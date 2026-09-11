@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e0d89f62431d2459ae11b28e6bdac7, type: 3}
+  m_Name: WaterLiliesDef
+  m_EditorClassIdentifier: Assembly-CSharp::DZDMapEditor.PlaceableItemDef
+  id: WaterLiliesDef
+  displayName: Water Lilies
+  category: {fileID: 11400000, guid: cdb75e0636309934ea8e7acb5a8279bc, type: 2}
+  prefab: {fileID: 169862, guid: 947174311f7a82f49aa030dc44eec3b0, type: 3}
+  icon: {fileID: 21300000, guid: 2d4fd5f0d0ba7c349b19f5f7d4757b09, type: 3}
+  alignToSurfaceNormal: 0
+  extraSurfaceOffset: 0

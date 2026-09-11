@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8072b5e1efe6ce84bad2702559a92eb6, type: 3}
+  m_Name: MapEditorOverlaySettings
+  m_EditorClassIdentifier: DZD.MapEditor::DZDMapEditor.MapEditorOverlaySettings
+  injectionPoint: 600
+  showInSceneView: 1
+  hoverLayer:
+    serializedVersion: 0
+    m_Bits: 256
+  ghostLayer:
+    serializedVersion: 0
+    m_Bits: 512
+  outlineWidth: 8
+  scaleWithResolution: 1
+  referenceResolution: 1080
+  hoverOutlineColor: {r: 1, g: 0.85, b: 0.2, a: 1}
+  ghostOutlineColor: {r: 0.4, g: 0.9, b: 1, a: 1}
+  ghostFillColor: {r: 0.4, g: 0.9, b: 1, a: 0.18}

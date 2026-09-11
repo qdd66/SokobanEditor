@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e0d89f62431d2459ae11b28e6bdac7, type: 3}
+  m_Name: Mushroom_Chanterelle_Mature_ADef
+  m_EditorClassIdentifier: Assembly-CSharp::DZDMapEditor.PlaceableItemDef
+  id: Mushroom_Chanterelle_Mature_ADef
+  displayName: Chanterelle A
+  category: {fileID: 11400000, guid: 808481590c20cbe4db8e2ab12390786e, type: 2}
+  prefab: {fileID: 6944724649323949726, guid: 5bc17b3a9ef390446a749e08e7be233e, type: 3}
+  icon: {fileID: 21300000, guid: 60e10189529d7254ebc5e57911854af1, type: 3}
+  alignToSurfaceNormal: 0
+  extraSurfaceOffset: 0

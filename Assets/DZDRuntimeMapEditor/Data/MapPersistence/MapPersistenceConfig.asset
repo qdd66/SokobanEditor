@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26ff7f12f29e183499bdb09b96cd69e1, type: 3}
+  m_Name: MapPersistenceConfig
+  m_EditorClassIdentifier: Assembly-CSharp::DZDMapEditor.MapPersistenceConfig
+  defaultFileName: Map
+  useProjectMapsFolderInEditor: 1
+  maxUndoSteps: 32
+  saveCamera: 1
+  saveKey: 33
+  saveRequiresCtrl: 1
+  loadKey: 29
+  loadRequiresCtrl: 0
+  undoKey: 40
+  undoRequiresCtrl: 0
+  redoKey: 39
+  redoRequiresCtrl: 1
+  closeLoadPanelKey: 60
+  toastChannel: {fileID: 11400000, guid: d6925ef851f0a6e48bda5d46c459c7a4, type: 2}
+  savedHint:
+    english: Saved {0}
+    chinese: "\u5DF2\u4FDD\u5B58 {0}"
+  loadedHint:
+    english: Loaded {0}
+    chinese: "\u5DF2\u52A0\u8F7D {0}"
+  saveFailedHint:
+    english: Save failed
+    chinese: "\u4FDD\u5B58\u5931\u8D25"
+  loadFailedHint:
+    english: Load failed
+    chinese: "\u52A0\u8F7D\u5931\u8D25"
+  nothingToUndoHint:
+    english: Nothing to undo
+    chinese: "\u6CA1\u6709\u53EF\u64A4\u56DE\u7684\u64CD\u4F5C"
+  undoneHint:
+    english: Undone
+    chinese: "\u5DF2\u64A4\u56DE"
+  redoneHint:
+    english: Redone
+    chinese: "\u5DF2\u91CD\u505A"
+  noMapsHint:
+    english: No saved maps yet
+    chinese: "\u8FD8\u6CA1\u6709\u4FDD\u5B58\u8FC7\u7684\u5730\u56FE"
+  missingItemsHint:
+    english: '{0} objects were skipped because their definitions are missing'
+    chinese: "\u6709 {0} \u4E2A\u7269\u4F53\u627E\u4E0D\u5230\u5B9A\u4E49\uFF0C\u5DF2\u8DF3\u8FC7"
+  loadListHint:
+    english: "Click a row to load \xB7 Rename or delete on the right \xB7 Esc to
+      close"
+    chinese: "\u70B9\u51FB\u4E00\u9879\u52A0\u8F7D \xB7 \u53F3\u4FA7\u53EF\u6539\u540D\u6216\u5220\u9664
+      \xB7 Esc \u5173\u95ED"
+  renameLabel:
+    english: Rename
+    chinese: "\u6539\u540D"
+  deleteLabel:
+    english: Delete
+    chinese: "\u5220\u9664"
+  renamePlaceholder:
+    english: New name
+    chinese: "\u8F93\u5165\u65B0\u540D\u79F0"
+  confirmDeleteTitle:
+    english: Delete Save
+    chinese: "\u5220\u9664\u5B58\u6863"
+  confirmDeleteHint:
+    english: Delete "{0}"? The file is removed from disk and cannot be undone.
+    chinese: "\u786E\u5B9A\u5220\u9664\u300C{0}\u300D\uFF1F\u6587\u4EF6\u4F1A\u4ECE\u78C1\u76D8\u53BB\u6389\uFF0C\u65E0\u6CD5\u64A4\u56DE\u3002"
+  confirmDeleteLabel:
+    english: Delete
+    chinese: "\u5220\u9664"
+  cancelLabel:
+    english: Cancel
+    chinese: "\u53D6\u6D88"
+  renamedHint:
+    english: Renamed to {0}
+    chinese: "\u5DF2\u6539\u540D\u4E3A {0}"
+  renameFailedHint:
+    english: Rename failed
+    chinese: "\u6539\u540D\u5931\u8D25"
+  emptyRenameHint:
+    english: Please enter a new name
+    chinese: "\u8BF7\u8F93\u5165\u65B0\u540D\u79F0"
+  nameTakenHint:
+    english: A save with that name already exists
+    chinese: "\u5DF2\u6709\u540C\u540D\u5B58\u6863"
+  deletedHint:
+    english: Deleted {0}
+    chinese: "\u5DF2\u5220\u9664 {0}"
+  deleteFailedHint:
+    english: Delete failed
+    chinese: "\u5220\u9664\u5931\u8D25"

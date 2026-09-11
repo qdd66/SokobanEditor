@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519407cd4dab0b74b807b71d4b104107, type: 3}
+  m_Name: PauseMenuConfig
+  m_EditorClassIdentifier: Assembly-CSharp::DZDMapEditor.PauseMenuConfig
+  pauseKey: 60
+  pauseTimeScale: 1
+  title:
+    english: Paused
+    chinese: "\u6682\u505C"
+  hint:
+    english: Esc to keep editing
+    chinese: "Esc \u7EE7\u7EED\u7F16\u8F91"
+  resumeLabel:
+    english: Resume
+    chinese: "\u56DE\u5230\u6E38\u620F"
+  saveLabel:
+    english: Save Map
+    chinese: "\u4FDD\u5B58\u573A\u666F"
+  loadLabel:
+    english: Load Map
+    chinese: "\u52A0\u8F7D\u573A\u666F"
+  settingsLabel:
+    english: Settings
+    chinese: "\u8BBE\u7F6E"
+  saveTitle:
+    english: Save Map
+    chinese: "\u4FDD\u5B58\u573A\u666F"
+  saveHint:
+    english: "Click a save to overwrite \xB7 Rename or delete on the right \xB7 Type
+      a name to create a new save"
+    chinese: "\u70B9\u51FB\u5DF2\u6709\u5B58\u6863\u8986\u76D6 \xB7 \u53F3\u4FA7\u53EF\u6539\u540D\u6216\u5220\u9664
+      \xB7 \u8F93\u5165\u540D\u79F0\u540E\u5EFA\u7ACB\u65B0\u5B58\u6863"
+  namePlaceholder:
+    english: Save name
+    chinese: "\u8F93\u5165\u5B58\u6863\u540D\u79F0"
+  createLabel:
+    english: Create New Save
+    chinese: "\u5EFA\u7ACB\u65B0\u5B58\u6863"
+  backLabel:
+    english: Back
+    chinese: "\u8FD4\u56DE"
+  emptyNameHint:
+    english: Please enter a save name
+    chinese: "\u8BF7\u8F93\u5165\u5B58\u6863\u540D\u79F0"

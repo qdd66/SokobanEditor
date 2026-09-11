@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e21cb13987dda4fab975c148f2ed47, type: 3}
+  m_Name: FirstPersonFlyConfig
+  m_EditorClassIdentifier: Assembly-CSharp::DZDMapEditor.FirstPersonFlyConfig
+  horizontalSpeed: 6
+  verticalSpeed: 5
+  lookSensitivity: 0.15
+  invertY: 0
+  minPitch: -89
+  maxPitch: 89
+  lockCursor: 1
+  unlockCursorKey: 60
+  forwardKey: 37
+  backKey: 33
+  leftKey: 15
+  rightKey: 18
+  ascendKey: 1
+  descendKey: 55
+  descendAltKey: 56

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e0d89f62431d2459ae11b28e6bdac7, type: 3}
+  m_Name: Mushroom_Summer_Bolete_Mature_ADef
+  m_EditorClassIdentifier: Assembly-CSharp::DZDMapEditor.PlaceableItemDef
+  id: Mushroom_Summer_Bolete_Mature_ADef
+  displayName: Summer Bolete A
+  category: {fileID: 11400000, guid: 808481590c20cbe4db8e2ab12390786e, type: 2}
+  prefab: {fileID: 5857214449478263315, guid: d47a245ff15f63f48a20e22ba98cd349, type: 3}
+  icon: {fileID: 21300000, guid: 155575f37a8eacd4bbf141fd8b124a4e, type: 3}
+  alignToSurfaceNormal: 0
+  extraSurfaceOffset: 0
