@@ -1,6 +1,7 @@
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace DZDMapEditor
 {
@@ -60,7 +61,10 @@ namespace DZDMapEditor
                 view.SettingsClicked += OpenSettings;
                 view.ApplyConfig(config);
                 if (view.SettingsView != null)
+                {
                     view.SettingsView.BackClicked += CloseSettings;
+                    view.SettingsView.ReturnToStartClicked += ReturnToStart;
+                }
             }
 
             if (savePanel != null)
@@ -79,7 +83,10 @@ namespace DZDMapEditor
                 view.LoadClicked -= OpenLoad;
                 view.SettingsClicked -= OpenSettings;
                 if (view.SettingsView != null)
+                {
                     view.SettingsView.BackClicked -= CloseSettings;
+                    view.SettingsView.ReturnToStartClicked -= ReturnToStart;
+                }
             }
 
             RestoreTimeScale();
@@ -240,6 +247,31 @@ namespace DZDMapEditor
         {
             if (view != null)
                 view.ShowMain();
+        }
+
+        void ReturnToStart()
+        {
+            var sceneName = settingsConfig != null ? settingsConfig.StartSceneName : "StartScene";
+            if (string.IsNullOrEmpty(sceneName) || !Application.CanStreamedLevelBeLoaded(sceneName))
+            {
+                var hint = settingsConfig != null
+                    ? settingsConfig.MissingStartSceneHint
+                    : MapEditorLocale.Pick(
+                        "Start scene is not in Build Settings",
+                        "开始场景未加入 Build Settings");
+                if (persistenceConfig != null && persistenceConfig.ToastChannel != null)
+                    persistenceConfig.ToastChannel.Raise(hint);
+                return;
+            }
+
+            MapSessionRequest.Clear();
+            RestoreTimeScale();
+            Time.timeScale = 1f;
+            if (gameplayCursor != null)
+                gameplayCursor.SetUiHold(false);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            SceneManager.LoadScene(sceneName);
         }
 
         void HandleOverwrite(MapFileInfo info)

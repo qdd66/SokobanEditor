@@ -17,6 +17,7 @@ MonoBehaviour:
   pauseMenuConfig: {fileID: 11400000, guid: eea112feb9f608c49a7b8abe1900d060, type: 2}
   persistenceConfig: {fileID: 11400000, guid: 5a8f5144547f5e048928cf9303d0e86f, type: 2}
   localeSettings: {fileID: 11400000, guid: d369e57e167e1864dab36d1ec5be749f, type: 2}
+  startMenuConfig: {fileID: 11400000, guid: 86da2e947b819a8489abfcc448a48526, type: 2}
   panelBackground: {fileID: -6695950386315148514, guid: 70179224421fd22409eb8a7d5387a326, type: 3}
   title:
     english: Settings
@@ -28,6 +29,12 @@ MonoBehaviour:
   backLabel:
     english: Back
     chinese: "\u8FD4\u56DE"
+  returnToStartLabel:
+    english: Return to Start
+    chinese: "\u8FD4\u56DE\u5F00\u59CB\u754C\u9762"
+  missingStartSceneHint:
+    english: Start scene is not in Build Settings
+    chinese: "\u5F00\u59CB\u573A\u666F\u672A\u52A0\u5165 Build Settings"
   controlTab:
     english: Controls
     chinese: "\u63A7\u5236"

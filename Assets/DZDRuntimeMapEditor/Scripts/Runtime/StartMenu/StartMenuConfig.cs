@@ -10,6 +10,11 @@ namespace DZDMapEditor
     public sealed class StartMenuConfig : ScriptableObject
     {
         [Title("场景")]
+        [LabelText("开始场景名")]
+        [Tooltip("Build Settings 里的开始界面场景名，设置里返回开始界面会加载它。")]
+        [SerializeField]
+        string startSceneName = "StartScene";
+
         [LabelText("编辑场景名")]
         [Tooltip("Build Settings 里的场景名，新建和读档都会加载它。")]
         [SerializeField]
@@ -36,6 +41,9 @@ namespace DZDMapEditor
         [LabelText("新建地图")]
         [SerializeField]
         LocalizedText newMapLabel = new LocalizedText("New Map", "新建地图");
+
+        public string StartSceneName =>
+            string.IsNullOrEmpty(startSceneName) ? "StartScene" : startSceneName;
 
         public string EditorSceneName => editorSceneName;
         public Key CloseLoadPanelKey => closeLoadPanelKey;

@@ -27,6 +27,14 @@ namespace DZDMapEditor
         [SerializeField]
         TMP_Text backLabel;
 
+        [LabelText("返回开始界面")]
+        [SerializeField]
+        Button returnToStartButton;
+
+        [LabelText("返回开始界面文字")]
+        [SerializeField]
+        TMP_Text returnToStartLabel;
+
         [LabelText("控制页签")]
         [SerializeField]
         Button controlTab;
@@ -82,6 +90,7 @@ namespace DZDMapEditor
         bool rebuildQueued;
 
         public event Action BackClicked;
+        public event Action ReturnToStartClicked;
 
         public bool IsListening => listeningRow != null;
 
@@ -101,6 +110,8 @@ namespace DZDMapEditor
                 hint.text = config.Hint;
             if (backLabel != null)
                 backLabel.text = config.BackLabel;
+            if (returnToStartLabel != null)
+                returnToStartLabel.text = config.ReturnToStartLabel;
             if (controlTabLabel != null)
                 controlTabLabel.text = config.ControlTab;
             if (characterTabLabel != null)
@@ -143,6 +154,7 @@ namespace DZDMapEditor
         void OnEnable()
         {
             Bind(backButton, HandleBack);
+            Bind(returnToStartButton, HandleReturnToStart);
             Bind(controlTab, () => SelectTab(SettingsCategory.Control));
             Bind(characterTab, () => SelectTab(SettingsCategory.Character));
             Bind(placementTab, () => SelectTab(SettingsCategory.Placement));
@@ -309,6 +321,12 @@ namespace DZDMapEditor
         {
             CancelListen();
             BackClicked?.Invoke();
+        }
+
+        void HandleReturnToStart()
+        {
+            CancelListen();
+            ReturnToStartClicked?.Invoke();
         }
 
         static void Bind(Button button, UnityEngine.Events.UnityAction action)

@@ -46,6 +46,14 @@ namespace DZDMapEditor
             return "设置面板已配置。暂停菜单中打开「设置」，可在运行时改 SO。";
         }
 
+        public static string EnsureReturnToStartUi()
+        {
+            var config = EnsureConfig();
+            PatchPausePrefab(config);
+            AssetDatabase.SaveAssets();
+            return "设置面板已加入返回开始界面按钮。";
+        }
+
         public static Sprite LoadBg0()
         {
             var assets = AssetDatabase.LoadAllAssetsAtPath(BgTexturePath);
@@ -68,6 +76,7 @@ namespace DZDMapEditor
             var bg = config.PanelBackground != null ? config.PanelBackground : LoadBg0();
             EnsureSettingsButton(pauseRoot.transform, font, config.PauseMenuConfig);
             EnsureSettingsPage(pauseRoot.transform, font, bg, config);
+            EnsureReturnToStartButton(pauseRoot.transform, font, bg, config);
             WirePauseView(pauseRoot);
         }
 
@@ -90,6 +99,8 @@ namespace DZDMapEditor
             so.FindProperty("persistenceConfig").objectReferenceValue =
                 AssetDatabase.LoadAssetAtPath<MapPersistenceConfig>(PersistenceConfigPath);
             so.FindProperty("localeSettings").objectReferenceValue = EnsureLocaleSettings();
+            so.FindProperty("startMenuConfig").objectReferenceValue =
+                AssetDatabase.LoadAssetAtPath<StartMenuConfig>(MapEditorPaths.StartMenuConfig);
             if (so.FindProperty("panelBackground").objectReferenceValue == null)
                 so.FindProperty("panelBackground").objectReferenceValue = LoadBg0();
             so.FindProperty("toastChannel").objectReferenceValue =
@@ -178,7 +189,7 @@ namespace DZDMapEditor
         {
             var existing = pauseRoot.Find("SettingsPage");
             if (existing != null)
-                Object.DestroyImmediate(existing.gameObject);
+                return existing.gameObject;
 
             return CreateSettingsPage(pauseRoot, font, bg, config);
         }
@@ -269,13 +280,16 @@ namespace DZDMapEditor
             scrollRect.content = contentRt;
 
             var back = CreateTab(window.transform, "Back", config.BackLabel, font, bg, false);
-            var backRt = back.GetComponent<RectTransform>();
-            Object.DestroyImmediate(back.GetComponent<LayoutElement>());
-            backRt.anchorMin = new Vector2(0.5f, 0f);
-            backRt.anchorMax = new Vector2(0.5f, 0f);
-            backRt.pivot = new Vector2(0.5f, 0f);
-            backRt.anchoredPosition = new Vector2(0f, 16f);
-            backRt.sizeDelta = new Vector2(220f, 44f);
+            PlaceFooterButton(back.transform, -150f, 200f);
+
+            var returnToStart = CreateTab(
+                window.transform,
+                "ReturnToStart",
+                config.ReturnToStartLabel,
+                font,
+                bg,
+                false);
+            PlaceFooterButton(returnToStart.transform, 150f, 280f);
 
             var templates = CreateUi("Templates", window.transform);
             templates.SetActive(false);
@@ -290,6 +304,9 @@ namespace DZDMapEditor
             viewSo.FindProperty("hint").objectReferenceValue = hint;
             viewSo.FindProperty("backButton").objectReferenceValue = back.GetComponent<Button>();
             viewSo.FindProperty("backLabel").objectReferenceValue = back.GetComponentInChildren<TMP_Text>();
+            viewSo.FindProperty("returnToStartButton").objectReferenceValue = returnToStart.GetComponent<Button>();
+            viewSo.FindProperty("returnToStartLabel").objectReferenceValue =
+                returnToStart.GetComponentInChildren<TMP_Text>();
             viewSo.FindProperty("controlTab").objectReferenceValue = controlTab.GetComponent<Button>();
             viewSo.FindProperty("characterTab").objectReferenceValue = characterTab.GetComponent<Button>();
             viewSo.FindProperty("placementTab").objectReferenceValue = placementTab.GetComponent<Button>();
@@ -305,6 +322,66 @@ namespace DZDMapEditor
 
             page.SetActive(false);
             return page;
+        }
+
+        static void EnsureReturnToStartButton(
+            Transform pauseRoot,
+            TMP_FontAsset font,
+            Sprite bg,
+            SettingsPanelConfig config)
+        {
+            var settingsPage = pauseRoot.Find("SettingsPage");
+            if (settingsPage == null)
+                return;
+
+            var window = settingsPage.Find("Window");
+            if (window == null)
+                return;
+
+            var back = window.Find("Back");
+            PlaceFooterButton(back, -150f, 200f);
+
+            var existing = window.Find("ReturnToStart");
+            GameObject returnToStart;
+            if (existing != null)
+            {
+                returnToStart = existing.gameObject;
+            }
+            else
+            {
+                var label = config != null ? config.ReturnToStartLabel : "返回开始界面";
+                returnToStart = CreateTab(window, "ReturnToStart", label, font, bg, false);
+            }
+
+            PlaceFooterButton(returnToStart.transform, 150f, 280f);
+
+            var view = settingsPage.GetComponent<SettingsPanelView>();
+            if (view == null)
+                return;
+
+            var viewSo = new SerializedObject(view);
+            viewSo.FindProperty("returnToStartButton").objectReferenceValue =
+                returnToStart.GetComponent<Button>();
+            viewSo.FindProperty("returnToStartLabel").objectReferenceValue =
+                returnToStart.GetComponentInChildren<TMP_Text>();
+            viewSo.ApplyModifiedPropertiesWithoutUndo();
+        }
+
+        static void PlaceFooterButton(Transform target, float x, float width)
+        {
+            if (target == null)
+                return;
+
+            var layout = target.GetComponent<LayoutElement>();
+            if (layout != null)
+                Object.DestroyImmediate(layout);
+
+            var rt = target.GetComponent<RectTransform>();
+            rt.anchorMin = new Vector2(0.5f, 0f);
+            rt.anchorMax = new Vector2(0.5f, 0f);
+            rt.pivot = new Vector2(0.5f, 0f);
+            rt.anchoredPosition = new Vector2(x, 16f);
+            rt.sizeDelta = new Vector2(width, 44f);
         }
 
         static GameObject CreateTab(

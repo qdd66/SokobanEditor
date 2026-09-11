@@ -30,6 +30,11 @@ namespace DZDMapEditor
         [SerializeField, Required("请指定语言配置"), AssetsOnly]
         MapEditorLocaleSettings localeSettings;
 
+        [LabelText("开始界面配置")]
+        [Tooltip("返回开始界面时读取场景名。可空则加载 StartScene。")]
+        [SerializeField, AssetsOnly]
+        StartMenuConfig startMenuConfig;
+
         [Title("外观")]
         [LabelText("面板背景")]
         [Tooltip("设置窗口默认背景。")]
@@ -50,6 +55,17 @@ namespace DZDMapEditor
         [LabelText("返回")]
         [SerializeField]
         LocalizedText backLabel = new LocalizedText("Back", "返回");
+
+        [LabelText("返回开始界面")]
+        [SerializeField]
+        LocalizedText returnToStartLabel = new LocalizedText("Return to Start", "返回开始界面");
+
+        [LabelText("开始场景缺失")]
+        [Tooltip("Build Settings 里找不到开始场景时的提示。")]
+        [SerializeField]
+        LocalizedText missingStartSceneHint = new LocalizedText(
+            "Start scene is not in Build Settings",
+            "开始场景未加入 Build Settings");
 
         [LabelText("控制")]
         [SerializeField]
@@ -118,10 +134,22 @@ namespace DZDMapEditor
         public PauseMenuConfig PauseMenuConfig => pauseMenuConfig;
         public MapPersistenceConfig PersistenceConfig => persistenceConfig;
         public MapEditorLocaleSettings LocaleSettings => localeSettings;
+        public StartMenuConfig StartMenuConfig => startMenuConfig;
         public Sprite PanelBackground => panelBackground;
         public string Title => title.Get();
         public string Hint => hint.Get();
         public string BackLabel => backLabel.Get();
+        public string ReturnToStartLabel => returnToStartLabel.Get();
+        public string MissingStartSceneHint => missingStartSceneHint.Get();
+        public string StartSceneName
+        {
+            get
+            {
+                if (startMenuConfig != null && !string.IsNullOrEmpty(startMenuConfig.StartSceneName))
+                    return startMenuConfig.StartSceneName;
+                return "StartScene";
+            }
+        }
         public string ControlTab => controlTab.Get();
         public string CharacterTab => characterTab.Get();
         public string PlacementTab => placementTab.Get();
