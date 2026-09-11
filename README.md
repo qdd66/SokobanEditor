@@ -7,6 +7,7 @@ Unity 推箱子玩法 + 运行时地图编辑器。打开示例关即可游玩�
 - 引擎：**Unity 6000.3.12f1**（Unity 6）
 - 渲染：**URP**
 - 仓库：https://github.com/qdd66/SokobanEditor
+- 视频演示链接：https://my.feishu.cn/wiki/CGFqw4JC5i7tAKkAhGCcUBSAn5b?from=from_copylink
 
 更细的模块边界、配置路径和约定见 [`项目手册.md`](项目手册.md)。
 
